@@ -21,6 +21,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('webapp/', include('webapp.urls')),
-    path('', include('personal.urls'))  # The index page (home page)
+    path('webapp/', include('webapp.urls')),  # Not actually used
+    path('', include('personal.urls')),  # The index page (home page)
+    path('blog/', include('blog.urls'))  # The blog page
 ]
