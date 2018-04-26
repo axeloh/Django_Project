@@ -1,7 +1,4 @@
 
-mysite/
-mysite/
-settings.py
-
+mysite/mysite/settings.py
 
 mysite/db.sqlite3
