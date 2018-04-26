@@ -1,2 +1,4 @@
 /mysite/mysite/settings.py
 /mysite/db.sqlite3
+*.pyo
+*.pyc
