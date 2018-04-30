@@ -2,22 +2,21 @@
 {% extends "personal/header.html" %}
 
 {% block content %}
-
-<script>alert("Sikker på at du vil inn her?");</script>
-
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="popup.css" > <!-- CSS !-->
+  {% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'personal/css/popup.css' %}" > <!-- CSS !-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<script>alert("Sikker på at du vil inn her? ;)") ;</script>
 <p>Heihei</p>
 <div class="popup" onclick="myFunction()">Klikk her for å se sannheten!
   <span class="popuptext" id="myPopup">Axel er kul</span>
 </div>
 
-<script type="text/javascript" src="popup.js"></script>
+<script type="text/javascript" src="{% static 'personal/js/popup.js' %}" ></script>
 
 </body>
 </html>
