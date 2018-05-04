@@ -3,4 +3,4 @@
 *.pyo
 *.pyc
 *.xml
-*.idea
+.idea/
