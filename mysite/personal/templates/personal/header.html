@@ -17,7 +17,7 @@
 </head>
 
 <body class="body" style="background-color:#f6f6f6">
-	<link src="{% static 'personal/js/bootstrap.js' %}" type="text/javascript">
+	<link src="{% static 'personal/js/bootstrap.js' %}" type="text/javascript" >
 	<div class="container-fluid" style="min-height:95%; ">
 		<div class="row">
 			  <div class="col-sm-2">
@@ -35,35 +35,41 @@
 		</div><hr>
 
 		<div class="row">
+
 		  <div class="col-sm-2">
 		  <br>
-
 		  <br>
 		   <!-- Great, til you resize. -->
 			<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
 			<div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
-			  <ul class="nav flex-column nav-pills" id="v-pills-tab" aria-orientation="vertical">
-			  <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="/" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-			  <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="/blog/" role="tab" aria-controls="v-pills-profile" aria-selected="false">Blog</a>
-			  <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="/contact/" role="tab" aria-controls="v-pills-messages" aria-selected="false">Contact</a>
-			  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/extra/" role="tab" aria-controls="v-pills-settings" aria-selected="false">Extra</a>
-			</ul>
 
+			  <ul class="nav nav-tabs" id="myTab" role="tablist">
+				  <li class="nav-item">
+					  <a class="nav-link" id="home-tab" data-toggle="tab" href="/" role="tab" aria-controls="home" aria-selected="true">Home</a>
+				  </li>
+				  <li class="nav-item">
+					  <a class="nav-link" id="blog-tab" data-toggle="tab" href="/blog/" role="tab" aria-controls="blog" aria-selected="false">Blog</a>
+				  </li>
+				  <li class="nav-item">
+					  <a class="nav-link" id="contact-tab" data-toggle="tab" href="/contact/" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+				  </li>
+				  <li class="nav-item">
+					  <a class="nav-link" id="extra-tab" data-toggle="tab" href="/extra/" role="tab" aria-controls="extra" aria-selected="false">Extra</a>
+				  </li>
+				</ul>
 			</div> <!--well bs-sidebar affix-->
 		  </div> <!--col-sm-2-->
 
-
-
-
-
 		  <div class="col-sm-10">
-
 			<div class='container-fluid'>
-			<br><br>
-			   {% block content %}
-			   {% endblock %}
+				<div class="tab-content">
+					<br><br>
+			   		{% block content %}
+			   		{% endblock %}
+				</div>
 			</div>
 		  </div>
+
 		</div>
 	</div>
 	<footer>
